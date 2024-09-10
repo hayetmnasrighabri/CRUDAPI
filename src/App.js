@@ -17,9 +17,9 @@ function App() {
         </div>
         <div className='col-10'>
           <Routes>
-            <Route path='/Home' element={<Home/>} />
+            <Route path='/' element={<Home/>} />
             <Route path='Products' element={<Products/>}/>
-            <Route path='Products/Add' element={<AddProduct/>} />
+            <Route path='Products/Add' element={<AddProduct/>}/>
             <Route path='product/:productId' element={<ProductsDetails/>}/>  
           </Routes>
         </div>

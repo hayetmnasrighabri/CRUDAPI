@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Product.css'
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import AddProduct from './AddProduct';
 function Products() {
   const [products, setProducts] = useState([]);
   
@@ -35,7 +36,7 @@ function Products() {
   return (
     <div>
       <h1>Products</h1>
-      <Link to={'Products/Add'} className='btn btn-success'>
+      <Link to="/Products/Add" className='btn btn-success'>
         Add Product
       </Link>
       <hr />
@@ -62,7 +63,7 @@ function Products() {
               <td>{product.rating?.rate}</td>
               <td className='btn btn-td'>
                 <button className='btn btn-danger btn-sm' onClick={()=>handleDelete(product.id)}>Delete</button>
-                <Link mclassName='btn btn-info btn-sm' to={`/product/${product.id}`} >View</Link>
+                <Link className='btn btn-info btn-sm' to={`/product/${product.id}`} >View</Link>
                 <button className='btn btn-primary btn-sm'>Edit</button>
               </td>
             </tr>
