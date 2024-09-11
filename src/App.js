@@ -7,6 +7,7 @@ import Products from './pages/Products'
 import { Route, Routes } from 'react-router-dom'
 import AddProduct from './pages/AddProduct'
 import ProductsDetails from './pages/ProductsDetails'
+import EditProduct from './pages/EditProduct'
 function App() {
   return (
     <div>
@@ -18,9 +19,10 @@ function App() {
         <div className='col-10'>
           <Routes>
             <Route path='/' element={<Home/>} />
-            <Route path='Products' element={<Products/>}/>
-            <Route path='Products/Add' element={<AddProduct/>}/>
+            <Route path='products' element={<Products/>}/>
+            <Route path='products/Add' element={<AddProduct/>}/>
             <Route path='product/:productId' element={<ProductsDetails/>}/>  
+            <Route path='products/Edit' element={<EditProduct/>} />
           </Routes>
         </div>
       </div>

@@ -9,6 +9,9 @@ function AddProduct() {
 
     fetch(`https://fakestoreapi.com/products`, {
       method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         title,
         price: parseFloat(price),
