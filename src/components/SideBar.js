@@ -9,7 +9,7 @@ function SideBar() {
             <Link to='/Products'>Get All Products</Link>
         </li>
         <li>
-            <Link to='/Category'>Get All Categories</Link>
+            <Link to='/Categories'>Get All Categories</Link>
         </li>
       </ul>
     </>

@@ -63,7 +63,6 @@ function Products() {
         <tbody>
           {products.map((product) =>
             edit === product.id ? (
-              // Afficher le formulaire d'édition pour le produit en mode édition
               <EditProduct
                 key={product.id}
                 product={product}
