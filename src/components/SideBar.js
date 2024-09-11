@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Products from '../pages/Products'
+
 function SideBar() {
   return (
     <>
-      <ul className='List-unstyled'>
+      <ul className='list-unstyled'>
         <li>
-            <Link to={'Products'} > get All Products </Link>
+            <Link to='/Products'>Get All Products</Link>
         </li>
         <li>
-            <a href='#'>get All Categories</a>
+            <Link to='/Category'>Get All Categories</Link>
         </li>
       </ul>
     </>
   )
 }
 
-export default SideBar
+export default SideBar;
