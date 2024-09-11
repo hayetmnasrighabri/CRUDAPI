@@ -9,7 +9,12 @@ function Category() {
       .then((data) => setCategories(data));
   }, []);
 
-
+  const handleDelete=(index)=>{
+     const deleteCategory = categories.filter(
+        ((_, i) => i !== index)
+            )
+            setCategories(deleteCategory)
+        }
   
   
 
@@ -30,7 +35,7 @@ function Category() {
                 <td>{index}</td>
               <td>{category}</td>
               <td>
-                <button className="btn btn-danger btn-sm" >Delete</button>
+                <button className="btn btn-danger btn-sm" onClick={()=>handleDelete(index)} >Delete</button>
                 <button className="btn btn-info btn-sm">View</button>
                 <button className="btn btn-primary btn-sm">Edit</button>
               </td>
